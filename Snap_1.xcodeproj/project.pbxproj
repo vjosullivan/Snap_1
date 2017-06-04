@@ -15,6 +15,7 @@
 		F19915DC1EE40DF400879FCC /* Snap_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915DB1EE40DF400879FCC /* Snap_1Tests.swift */; };
 		F19915E81EE41BF000879FCC /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19915E71EE41BF000879FCC /* Action_Man.ttf */; };
 		F19915EA1EE41CD100879FCC /* extensionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915E91EE41CD100879FCC /* extensionUIButton.swift */; };
+		F19915EC1EE42CCD00879FCC /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915EB1EE42CCD00879FCC /* HostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		F19915DD1EE40DF400879FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F19915E71EE41BF000879FCC /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = "<group>"; };
 		F19915E91EE41CD100879FCC /* extensionUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIButton.swift; sourceTree = "<group>"; };
+		F19915EB1EE42CCD00879FCC /* HostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +83,15 @@
 		F19915C51EE40DF400879FCC /* Snap_1 */ = {
 			isa = PBXGroup;
 			children = (
-				F19915E61EE4186700879FCC /* Supporting Files */,
 				F19915C61EE40DF400879FCC /* AppDelegate.swift */,
-				F19915C81EE40DF400879FCC /* MainViewController.swift */,
 				F19915CA1EE40DF400879FCC /* Main.storyboard */,
-				F19915CD1EE40DF400879FCC /* Assets.xcassets */,
 				F19915CF1EE40DF400879FCC /* LaunchScreen.storyboard */,
+				F19915C81EE40DF400879FCC /* MainViewController.swift */,
+				F19915EB1EE42CCD00879FCC /* HostViewController.swift */,
+				F19915CD1EE40DF400879FCC /* Assets.xcassets */,
 				F19915D21EE40DF400879FCC /* Info.plist */,
 				F19915E91EE41CD100879FCC /* extensionUIButton.swift */,
+				F19915E61EE4186700879FCC /* Supporting Files */,
 			);
 			path = Snap_1;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F19915EC1EE42CCD00879FCC /* HostViewController.swift in Sources */,
 				F19915C91EE40DF400879FCC /* MainViewController.swift in Sources */,
 				F19915EA1EE41CD100879FCC /* extensionUIButton.swift in Sources */,
 				F19915C71EE40DF400879FCC /* AppDelegate.swift in Sources */,

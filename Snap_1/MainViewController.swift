@@ -33,6 +33,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var cardPView: UIImageView!
     @IBOutlet weak var cardJokerView: UIImageView!
 
+    // MARK: - UIViewController functions.
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -54,6 +56,8 @@ class MainViewController: UIViewController {
         performIntroCardAnimation()
         performIntroButtonAnimation()
     }
+
+    // MARK: - Actions.
 
     // MARK: - Local functions.
 
