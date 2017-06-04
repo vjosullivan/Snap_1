@@ -10,6 +10,17 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    private var buttonsEnabled: Bool {
+        get {
+            return hostGameButton.isEnabled
+        }
+        set {
+            hostGameButton.isEnabled = newValue
+            joinGameButton.isEnabled = newValue
+            soloGameButton.isEnabled = newValue
+        }
+    }
+
     // MARK: - Outlets
 
     @IBOutlet weak var hostGameButton: UIButton!
@@ -40,7 +51,8 @@ class MainViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        performIntroAnimation()
+        performIntroCardAnimation()
+        performIntroButtonAnimation()
     }
 
     // MARK: - Local functions.
@@ -51,9 +63,15 @@ class MainViewController: UIViewController {
         cardAView.isHidden = true
         cardPView.isHidden = true
         cardJokerView.isHidden = true
+
+        hostGameButton.alpha = 0.0
+        joinGameButton.alpha = 0.0
+        soloGameButton.alpha = 0.0
+
+        buttonsEnabled = false
     }
 
-    private func performIntroAnimation() {
+    private func performIntroCardAnimation() {
 
         cardSView.isHidden = false
         cardNView.isHidden = false
@@ -85,6 +103,16 @@ class MainViewController: UIViewController {
             self.cardJokerView.transform = CGAffineTransform(rotationAngle: 0.22)
         },
         completion: nil)
+    }
+
+    private func performIntroButtonAnimation() {
+        UIView.animate(withDuration: 0.5, delay: 1.0, options: .curveEaseOut, animations: {
+            self.hostGameButton.alpha = 1.0
+            self.joinGameButton.alpha = 1.0
+            self.soloGameButton.alpha = 1.0
+            }, completion: { (Bool) in
+                self.buttonsEnabled = true
+            })
     }
 }
 
