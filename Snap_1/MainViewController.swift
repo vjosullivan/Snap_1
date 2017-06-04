@@ -24,12 +24,67 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        hostGameButton.applySnapStyle()
+        joinGameButton.applySnapStyle()
+        soloGameButton.applySnapStyle()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        prepareForIntroAnimation()
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        performIntroAnimation()
+    }
+
+    // MARK: - Local functions.
+
+    private func prepareForIntroAnimation() {
+        cardSView.isHidden = true
+        cardNView.isHidden = true
+        cardAView.isHidden = true
+        cardPView.isHidden = true
+        cardJokerView.isHidden = true
+    }
+
+    private func performIntroAnimation() {
+
+        cardSView.isHidden = false
+        cardNView.isHidden = false
+        cardAView.isHidden = false
+        cardPView.isHidden = false
+        cardJokerView.isHidden = false
+
+        let point = CGPoint(x: view.bounds.size.width / 2.0, y: view.bounds.size.height * 2.0)
+
+        cardSView.center = point;
+        cardNView.center = point;
+        cardAView.center = point;
+        cardPView.center = point;
+        cardJokerView.center = point;
+
+        UIView.animate(withDuration:0.65, delay:0.5, options: .curveEaseOut, animations: {
+            self.cardSView.center = CGPoint(x: 80.0, y: 108.0)
+            self.cardSView.transform = CGAffineTransform(rotationAngle: -0.22)
+
+            self.cardNView.center = CGPoint(x: 160.0, y: 93.0)
+            self.cardNView.transform = CGAffineTransform(rotationAngle: -0.1)
+
+            self.cardAView.center = CGPoint(x: 240.0, y: 88.0)
+
+            self.cardPView.center = CGPoint(x: 320.0, y: 93.0)
+            self.cardPView.transform = CGAffineTransform(rotationAngle: 0.1)
+
+            self.cardJokerView.center = CGPoint(x: 400.0, y: 108.0)
+            self.cardJokerView.transform = CGAffineTransform(rotationAngle: 0.22)
+        },
+        completion: nil)
     }
 }
 

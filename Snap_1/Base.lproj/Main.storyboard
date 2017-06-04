@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Action_Man.ttf">
+            <string>ActionMan</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -27,7 +32,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lqi-lB-Qbc">
                                 <rect key="frame" x="158" y="173" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ActionMan" family="Action Man" pointSize="16"/>
                                 <state key="normal" title="Host Game">
                                     <color key="titleColor" red="0.4549019608" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -35,7 +40,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBK-Qh-oIZ">
                                 <rect key="frame" x="158" y="218" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ActionMan" family="Action Man" pointSize="16"/>
                                 <state key="normal" title="Join Game">
                                     <color key="titleColor" red="0.4549019608" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -43,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-yw-2JI">
                                 <rect key="frame" x="158" y="263" width="165" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="ActionMan" family="Action Man" pointSize="16"/>
                                 <state key="normal" title="Single Player">
                                     <color key="titleColor" red="0.4549019608" green="0.75294117650000003" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -78,19 +83,19 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cardAView" destination="1VW-0y-uat" id="6K3-wN-8GI"/>
-                        <outlet property="cardJokerView" destination="9tx-B2-ALk" id="pdP-yh-r7b"/>
-                        <outlet property="cardNView" destination="bWM-s5-c3c" id="lKR-0r-fpb"/>
-                        <outlet property="cardPView" destination="hwd-nw-2Om" id="KcY-3h-Da2"/>
-                        <outlet property="cardSView" destination="2A0-8B-QUe" id="7tg-Od-tQW"/>
+                        <outlet property="cardAView" destination="1VW-0y-uat" id="F9y-o5-VZp"/>
+                        <outlet property="cardJokerView" destination="9tx-B2-ALk" id="luC-RG-S1k"/>
+                        <outlet property="cardNView" destination="bWM-s5-c3c" id="5pC-ps-wOc"/>
+                        <outlet property="cardPView" destination="hwd-nw-2Om" id="RC3-UY-VXA"/>
+                        <outlet property="cardSView" destination="2A0-8B-QUe" id="UuM-wr-oD4"/>
                         <outlet property="hostGameButton" destination="lqi-lB-Qbc" id="8yV-pc-BaZ"/>
                         <outlet property="joinGameButton" destination="OBK-Qh-oIZ" id="Kmw-1L-l2R"/>
-                        <outlet property="soloGameButton" destination="lTh-yw-2JI" id="g0s-Jx-FOU"/>
+                        <outlet property="soloGameButton" destination="lTh-yw-2JI" id="P0g-cp-oUZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="216" y="-548"/>
+            <point key="canvasLocation" x="164" y="41"/>
         </scene>
     </scenes>
     <resources>

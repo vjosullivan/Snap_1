@@ -13,6 +13,8 @@
 		F19915CE1EE40DF400879FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F19915CD1EE40DF400879FCC /* Assets.xcassets */; };
 		F19915D11EE40DF400879FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F19915CF1EE40DF400879FCC /* LaunchScreen.storyboard */; };
 		F19915DC1EE40DF400879FCC /* Snap_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915DB1EE40DF400879FCC /* Snap_1Tests.swift */; };
+		F19915E81EE41BF000879FCC /* Action_Man.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F19915E71EE41BF000879FCC /* Action_Man.ttf */; };
+		F19915EA1EE41CD100879FCC /* extensionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915E91EE41CD100879FCC /* extensionUIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F19915D71EE40DF400879FCC /* Snap_1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Snap_1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19915DB1EE40DF400879FCC /* Snap_1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap_1Tests.swift; sourceTree = "<group>"; };
 		F19915DD1EE40DF400879FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F19915E71EE41BF000879FCC /* Action_Man.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Action_Man.ttf; sourceTree = "<group>"; };
+		F19915E91EE41CD100879FCC /* extensionUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 				F19915CD1EE40DF400879FCC /* Assets.xcassets */,
 				F19915CF1EE40DF400879FCC /* LaunchScreen.storyboard */,
 				F19915D21EE40DF400879FCC /* Info.plist */,
+				F19915E91EE41CD100879FCC /* extensionUIButton.swift */,
 			);
 			path = Snap_1;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		F19915E61EE4186700879FCC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F19915E71EE41BF000879FCC /* Action_Man.ttf */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 				F19915D11EE40DF400879FCC /* LaunchScreen.storyboard in Resources */,
 				F19915CE1EE40DF400879FCC /* Assets.xcassets in Resources */,
 				F19915CC1EE40DF400879FCC /* Main.storyboard in Resources */,
+				F19915E81EE41BF000879FCC /* Action_Man.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F19915C91EE40DF400879FCC /* MainViewController.swift in Sources */,
+				F19915EA1EE41CD100879FCC /* extensionUIButton.swift in Sources */,
 				F19915C71EE40DF400879FCC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +430,7 @@
 				F19915E21EE40DF400879FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F19915E31EE40DF400879FCC /* Build configuration list for PBXNativeTarget "Snap_1Tests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +439,7 @@
 				F19915E51EE40DF400879FCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
