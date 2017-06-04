@@ -59,6 +59,12 @@ class MainViewController: UIViewController {
 
     // MARK: - Actions.
 
+    @IBAction func hostGame(_ sender: UIButton) {
+        performExitAnimationWithCompletionBlock { [weak self] in
+            self?.performSegue(withIdentifier: "segueMainToHost", sender: self)
+        }
+    }
+
     // MARK: - Local functions.
 
     private func prepareForIntroAnimation() {
@@ -105,8 +111,7 @@ class MainViewController: UIViewController {
 
             self.cardJokerView.center = CGPoint(x: 400.0, y: 108.0)
             self.cardJokerView.transform = CGAffineTransform(rotationAngle: 0.22)
-        },
-        completion: nil)
+        })
     }
 
     private func performIntroButtonAnimation() {
@@ -114,9 +119,45 @@ class MainViewController: UIViewController {
             self.hostGameButton.alpha = 1.0
             self.joinGameButton.alpha = 1.0
             self.soloGameButton.alpha = 1.0
+        }, completion: { (Bool) in
+            self.buttonsEnabled = true
+        })
+    }
+
+
+    /// Perform a pretty animation before the segue to the next screen.
+    ///
+    /// - Parameter completionBlock: Should include the segue to the next screen.
+    ///
+    private func performExitAnimationWithCompletionBlock(completionBlock: @escaping () -> ()) {
+        buttonsEnabled = false
+
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {
+            self.cardSView.center = self.cardAView.center
+            self.cardSView.transform = self.cardAView.transform
+            self.cardNView.center = self.cardAView.center
+            self.cardNView.transform = self.cardAView.transform
+            self.cardPView.center = self.cardAView.center
+            self.cardPView.transform = self.cardAView.transform
+            self.cardJokerView.center = self.cardAView.center
+            self.cardJokerView.transform = self.cardAView.transform
+        }, completion: { (Bool) in
+            let point = CGPoint(x: self.cardAView.center.x, y: self.view.frame.size.height * -2.0)
+            UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseOut, animations: {
+                self.cardSView.center = point
+                self.cardNView.center = point
+                self.cardAView.center = point
+                self.cardPView.center = point
+                self.cardJokerView.center = point
             }, completion: { (Bool) in
-                self.buttonsEnabled = true
+                completionBlock()
             })
+            UIView.animate(withDuration: 0.3, delay: 0.3, options: .curveEaseOut, animations: {
+                self.hostGameButton.alpha = 0.0
+                self.joinGameButton.alpha = 0.0
+                self.soloGameButton.alpha = 0.0
+            })
+        })
     }
 }
 

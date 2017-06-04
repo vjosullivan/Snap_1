@@ -19,20 +19,23 @@ class HostViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startButton: UIButton!
 
+    // MARK: - UIViewController functions.
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        headingLabel.font = UIFont.snapFont(ofSize: 24)
+        nameLabel.font = UIFont.snapFont(ofSize: 16)
+        statusLabel.font = UIFont.snapFont(ofSize: 16)
+        nameEntry.font = UIFont.snapFont(ofSize: 20)
 
-        // Do any additional setup after loading the view.
+        startButton.applySnapStyle(size: 20)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
     }
 
     // MARK: - Actions.
-
-    @IBOutlet weak var startAction: UIButton!
 
     @IBAction func startAction(_ sender: UIButton) {
     }
