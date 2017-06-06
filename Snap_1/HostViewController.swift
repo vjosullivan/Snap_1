@@ -28,7 +28,12 @@ class HostViewController: UIViewController {
         statusLabel.font = UIFont.snapFont(ofSize: 16)
         nameEntry.font = UIFont.snapFont(ofSize: 20)
 
-        startButton.applySnapStyle(size: 20)
+        startButton.applySnapStyle(withFontSize: 20)
+
+        // Taps outside text entry field dismiss keyboard.
+        let gestureRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(resignFirstResponder))
+        gestureRecognizer.cancelsTouchesInView = false
+        view.addGestureRecognizer(gestureRecognizer)
     }
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -65,4 +70,8 @@ extension HostViewController: UITableViewDelegate {
 
 extension HostViewController: UITextFieldDelegate {
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder
+        return false
+    }
 }

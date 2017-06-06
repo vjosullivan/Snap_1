@@ -12,7 +12,7 @@ extension UIButton {
 
     /// Sets a standarized title font and background for the application's buttons.
     ///
-    public func applySnapStyle(size: CGFloat = 20) {
+    public func applySnapStyle(withFontSize size: CGFloat = 20) {
         titleLabel?.font = UIFont.snapFont(ofSize: 20)
         
         let buttonImage = UIImage(named: "Button")?.stretchableImage(withLeftCapWidth: 15, topCapHeight: 0)
