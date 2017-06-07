@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1245FBA1EE83ABE0001AD9E /* HostViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1245FB91EE83ABE0001AD9E /* HostViewControllerDelegate.swift */; };
 		F137CCDC1EE44D6B007F9FC6 /* extensionUIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F137CCDB1EE44D6B007F9FC6 /* extensionUIFont.swift */; };
 		F19915C71EE40DF400879FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915C61EE40DF400879FCC /* AppDelegate.swift */; };
 		F19915C91EE40DF400879FCC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19915C81EE40DF400879FCC /* MainViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F1245FB91EE83ABE0001AD9E /* HostViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewControllerDelegate.swift; sourceTree = "<group>"; };
 		F137CCDB1EE44D6B007F9FC6 /* extensionUIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensionUIFont.swift; sourceTree = "<group>"; };
 		F19915C31EE40DF400879FCC /* Snap_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snap_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19915C61EE40DF400879FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				F137CCDB1EE44D6B007F9FC6 /* extensionUIFont.swift */,
 				F19915E91EE41CD100879FCC /* extensionUIButton.swift */,
 				F19915E61EE4186700879FCC /* Supporting Files */,
+				F1245FB91EE83ABE0001AD9E /* HostViewControllerDelegate.swift */,
 			);
 			path = Snap_1;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				F19915C91EE40DF400879FCC /* MainViewController.swift in Sources */,
 				F19915EA1EE41CD100879FCC /* extensionUIButton.swift in Sources */,
 				F19915C71EE40DF400879FCC /* AppDelegate.swift in Sources */,
+				F1245FBA1EE83ABE0001AD9E /* HostViewControllerDelegate.swift in Sources */,
 				F137CCDC1EE44D6B007F9FC6 /* extensionUIFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
