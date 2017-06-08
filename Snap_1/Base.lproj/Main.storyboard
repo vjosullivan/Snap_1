@@ -99,7 +99,7 @@
         <!--Host View Controller-->
         <scene sceneID="EhV-Tp-7T9">
             <objects>
-                <viewController id="93u-bG-BxX" customClass="HostViewController" customModule="Snap_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewControllerID" id="93u-bG-BxX" customClass="HostViewController" customModule="Snap_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ha-gc-HEa"/>
                         <viewControllerLayoutGuide type="bottom" id="S0O-zJ-IKR"/>

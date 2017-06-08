@@ -19,6 +19,10 @@ class HostViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var startButton: UIButton!
 
+    // MARK: - Delegate.
+
+    public var delegate: HostViewControllerDelegate?
+
     // MARK: - UIViewController functions.
 
     override func viewDidLoad() {
@@ -46,6 +50,8 @@ class HostViewController: UIViewController {
     }
 
     @IBAction func exitAction(_ sender: UIButton) {
+        print("eA")
+        delegate?.hostViewControllerDidCancel(controller: self)
     }
 }
 

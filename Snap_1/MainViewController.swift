@@ -61,7 +61,12 @@ class MainViewController: UIViewController {
 
     @IBAction func hostGame(_ sender: UIButton) {
         performExitAnimationWithCompletionBlock { [weak self] in
-            self?.performSegue(withIdentifier: "segueMainToHost", sender: self)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            if let controller = storyboard.instantiateViewController(withIdentifier: "HomeViewControllerID") as? HostViewController {
+                controller.delegate = self
+                self?.present(controller, animated: true, completion: nil)
+            }
+            // TODO: delete... self?.performSegue(withIdentifier: "segueMainToHost", sender: self)
         }
     }
 
@@ -158,6 +163,14 @@ class MainViewController: UIViewController {
                 self.soloGameButton.alpha = 0.0
             })
         })
+    }
+}
+
+extension MainViewController: HostViewControllerDelegate {
+
+    func hostViewControllerDidCancel(controller: HostViewController) {
+        print("HVCDC")
+        dismiss(animated: false)
     }
 }
 
